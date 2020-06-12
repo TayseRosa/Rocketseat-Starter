@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Criando elementos (link href) na DOM via JS</h1>
+
+    <div id="app">
+        <input type="text" id="nome" name="nome">
+    </div>
+
+    <script>
+        var linkElement = document.createElement('a')
+        linkElement.setAttribute('href', 'http://www.google.com.br')
+        linkElement.setAttribute('title', 'Site do Google')
+
+        var text = document.createTextNode('Acessar o site do Google')
+        linkElement.appendChild(text)
+
+        var containerElement = document.querySelector('#app')
+        containerElement.appendChild(linkElement)
+
+        var input = document.querySelector('#nome')
+        //containerElement.removeChild(input)
+    </script>
+</body>
+</html>

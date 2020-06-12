@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: rgb(70, 9, 70);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando JS..</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Usando o <strong>DOM</strong> em Javascript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        document.write(window.document.URL);
+        document.write(window.document.charset);
+        
+        var p1 = document.getElementsByTagName('p')[0]
+        var p2 = document.getElementsByTagName('p')[1]
+
+        window.document.write('<br/><br/>Está escrito assim: ' + p1.innerText + '<br/>')
+
+        p1.style.color = 'blue'
+
+        var corpo = document.body
+        //corpo.style.background = 'violet'
+
+        //var d = document.getElementById('msg')
+        //d.style.background = 'green'
+        //d.innerText = 'Alterei este texto via js'
+
+        var d = document.querySelector('div#msg')
+        d.style.color = 'pink'
+
+        window.document.write('<br/><br/>Está escrito assim: ' + p2.innerText + '<br/>')
+    </script>
+</body>
+</html>

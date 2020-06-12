@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Manipulação de elementos via JS</h1>
+
+    <div id="app">
+        <input type="text" id="nome" name="nome">
+        <button class="botao"> Adicionar </button>
+    </div>
+
+    <script>
+        //Referencia elementos da DOM
+        //var elemento = document.getElementById('nome')
+        //var elementos = document.getElementsByTagName('input')
+        //var elementoss = document.querySelector('input[name=nome]')
+        //console.log(elementoss)
+
+        var inputElement = document.querySelector('input[name=nome]')
+        var btnElement = document.querySelector('button.botao')
+        
+        btnElement.onclick = function(){
+            var text = inputElement.value
+            alert( text)
+        }
+        
+    </script>
+</body>
+</html>
